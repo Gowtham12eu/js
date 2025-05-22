@@ -1,0 +1,33 @@
+
+<html>
+    <body>
+        <h1>Pro</h1>
+        <input id="guessnumber">
+        <button onclick="change()">Check</button>
+        <p id="result">you are wrong</p>
+        <h3 id="score">Score:10</h3>
+
+
+    <script>
+        var A =document.getElementById("guessnumber")
+        var B=document.getElementById("result")
+        var random=Math.floor(Math.random()*10)+1
+        var s=document.getElementById("score")
+        var ts=10
+        function change()
+        {
+            var enter= A.value
+            if(random==enter)
+            {
+             B.textContent="right"
+             alert("You Won...")
+            }
+            else{
+             B.textContent="Wrong"
+             ts=ts-1
+             s.textContent="score:"+ts
+            }
+        }
+    </script>
+    </body>
+</html>
